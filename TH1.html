@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THuc hanh 1</title>
+</head>
+<body>
+<h2>Sample Screen</h2>
+<input id="input">
+<button onclick="add()">ADD</button>
+<button onclick="display()">Display</button>
+<p id="result"></p>
+<script>
+    let array=[];
+    function add() {
+        array.push(document.getElementById('input').value);
+        console.log(array);
+        document.getElementById('input').value="";
+    }
+    function display() {
+        let e=document.getElementById('result').innerHTML;
+        for (let i=0; i<array.length; i++){
+           e+= "Element "+ i+ "=" +array[i] + "<br>";
+
+        }
+        document.getElementById('result').innerHTML=e;
+    }
+</script>
+</body>
+</html>

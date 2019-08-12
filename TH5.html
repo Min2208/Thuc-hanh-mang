@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuc hanh 5</title>
+</head>
+<body>
+<h3>Caro Game Simple</h3>
+<p id="result"></p>
+<button onclick="changeValue()">Change value</button>
+<script>
+    let output="";
+    let array=[
+        [0,0,0,0,0],
+        [0,0,0,0,0],
+        [0,0,0,0,0],
+        [0,0,0,0,0],
+        [0,0,0,0,0]
+    ];
+    for (let i=0; i<5;i++){
+        output+= "<br>";
+        for (let j=0;j<5;j++){
+            output+= array[i][j] +" ";
+        }
+    }
+    document.getElementById('result').innerHTML=output;
+    function changeValue() {
+        let changeX=prompt("Nhap vi tri cot");
+        let changeY=prompt("Nhap vi tri dong");
+        array[changeX][changeY]="x";
+        let output="";
+        for (let i=0;i<5;i++){
+            output+="<br>";
+            for (let j=0; j<5; j++){
+                output+= array[i][j] + " ";
+            }
+        }
+        document.getElementById('result').innerHTML=output;
+    }
+</script>
+</body>
+</html>
